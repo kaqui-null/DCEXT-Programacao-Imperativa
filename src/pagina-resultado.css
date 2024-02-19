@@ -1,0 +1,57 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  text-align: center;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+table, td {
+  border: 10px solid rgb(217,217, 217);
+  border-radius: 10px;
+}
+thead, tfoot {
+  background-color: rgb(194,194,194);
+  border-radius: 10px;
+  color: black;
+}
+thead,th {
+  border-radius: 10px;
+}
+tbody, td {
+  border: 10px solid rgb(194,194,194);
+  background-color: rgb(194,194,194);
+  border-radius: 10px;
+}
+.tabela {
+  background-color: rgb(217,217,217);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cabecalho {
+  background-color: rgb(217,217,217);
+  border-radius: 20px;
+}
+.informacoes {
+  margin-top: 10px;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 20px;
+  padding: 20px;
+}
+.botao_menu {
+  background-color: rgb(194,194,194);
+  border: none;
+  border-radius: 15px;
+}
+.img_botao_menu {
+  height: 35px;
+  width: 25px;
+}
+.img_logo_sch {
+  width: 45px; 
+  height: 35px;
+}

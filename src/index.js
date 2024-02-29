@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import PaginaResultado from './pagina-resultado';
+import HistoricoGeral from './HistoricoGeral';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PaginaResultado />
+    <HistoricoGeral />
   </React.StrictMode>
 );
 

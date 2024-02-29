@@ -4,29 +4,8 @@ import sch from './imagens/sch.png'
 import React, { useState, useEffect } from 'react';
 
 function PaginaResultado() {
-
-  const [backendData, setBackendData] = useState(0)
-
-
-  useEffect(()=> {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      } 
-    )
-  }, [])
-
   return(
     <div>
-      {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.users.map((user, i) => (
-          <p key={i}>{user}</p>
-        ))
-      )}
       <Cabecalho/>
       <Informacoes/>
       <TabelaExame/>
@@ -48,8 +27,8 @@ function Cabecalho(){
         {mostrarInfo && (
           <div className='opcoes_do_menu'>
             <p>
-              <ul>LINK 1 AQUI</ul>
-              <ul>LINK 2 AQUI</ul>
+              <ul>HISTÓRICO</ul>
+              <ul>RESULTADOS</ul>
             </p>
           </div>
         )}
@@ -63,12 +42,13 @@ function TabelaExame(){
     <div className="tabela">
       <table>
         <thead>
-          <tr><th colSpan="2">NOME DO EXAME</th></tr>
+          <tr><th colSpan="3">NOME DO EXAME</th></tr>
         </thead>
         <tbody>
           <tr>
             <td>exame 1</td>
             <td>LINK PARA DOWNLOAD DO ARQUIVO (faltando)</td>
+            <td>status</td>
           </tr>
         </tbody>
       </table>
@@ -77,14 +57,36 @@ function TabelaExame(){
 }
 
 function Informacoes(){
+
+  const [backendData, setBackendData] = useState(0)
+
+
+  useEffect(()=> {
+    fetch("http://127.0.0.1:5000/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      } 
+    )
+  }, [])
+
   return(
     <div className="informacoes">
-    <p><strong>HOSPITAL: </strong><span className="hospital_exame"></span></p>
-    <p><strong>DATA DE REALIZAÇÃO: </strong><span className="data_real_exame"></span></p>
-    <p><strong>DATA LIBERAÇÃO: </strong><span className="data_lib_exame"></span></p>
-    <p><strong>STATUS: </strong><span className="status_exame"></span></p>
-    <p><strong>ARQUIVOS: </strong><span className="arquivos_exames"></span></p>
-  </div>
+      {(typeof backendData.hospital === 'undefined') ? (
+        <p>Loading...</p>
+      ) : (
+        backendData.hospital.map((hospital,i) => (
+        <div>
+          <p><strong>HOSPITAL: </strong><span key={i} className="hospital_exame">{hospital[0]}</span></p>
+        </div>
+        ))
+      )}
+      <p><strong>DATA DE REALIZAÇÃO: </strong><span className="data_real_exame"></span></p>
+      <p><strong>DATA LIBERAÇÃO: </strong><span className="data_lib_exame"></span></p>
+      <p><strong>STATUS: </strong><span className="status_exame"></span></p>
+      <p><strong>ARQUIVOS: </strong><span className="arquivos_exames"></span></p>
+    </div>
   );
 }
 

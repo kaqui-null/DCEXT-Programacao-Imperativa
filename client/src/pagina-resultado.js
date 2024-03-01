@@ -24,15 +24,17 @@ function Cabecalho(){
       <div className='cabecalho'>
         <button className='botao_menu' onClick={Info}><img className='img_botao_menu' src={icone_menu} alt=''></img></button>
         <img className='img_logo_sch' src={sch} alt=''></img>
+      </div>
         {mostrarInfo && (
           <div className='opcoes_do_menu'>
             <p>
               <ul>HISTÓRICO</ul>
               <ul>RESULTADOS</ul>
+              <ul>SERVIÇOS</ul>
+              <ul>TERMINAR SESSÃO</ul>
             </p>
           </div>
         )}
-      </div>
     </header>
   );
 }
@@ -42,12 +44,13 @@ function TabelaExame(){
     <div className="tabela">
       <table>
         <thead>
-          <tr><th colSpan="3">NOME DO EXAME</th></tr>
+          <tr><th colSpan="4">NOME DO EXAME</th></tr>
         </thead>
         <tbody>
           <tr>
             <td>exame 1</td>
-            <td>LINK PARA DOWNLOAD DO ARQUIVO (faltando)</td>
+            <td>LINK PARA ACESSO</td>
+            <td>LINK PARA DOWNLOAD</td>
             <td>status</td>
           </tr>
         </tbody>
@@ -78,7 +81,7 @@ function Informacoes(){
       ) : (
         backendData.hospital.map((hospital,i) => (
         <div>
-          <p><strong>HOSPITAL: </strong><span key={i} className="hospital_exame">{hospital[0]}</span></p>
+          <p><strong>HOSPITAL: </strong><span key={i} className="hospital_exame">{hospital}</span></p>
         </div>
         ))
       )}

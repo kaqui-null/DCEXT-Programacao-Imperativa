@@ -10,7 +10,7 @@ var usuario = { // info vem do backend dps
 function UserImg() {
     return (
       <div>
-      <img src={require("../imgs/default_user_escaled.jpg")} alt='imagem usuário'></img>
+      <img src={require("../imgs/default_user_escaled.jpg")} alt='imagem do usuário'></img>
       </div>
     );
   }

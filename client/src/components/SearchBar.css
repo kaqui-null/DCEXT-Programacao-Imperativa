@@ -1,0 +1,42 @@
+.ImageSearch {
+
+    width: 12px;
+    height: auto;
+}
+
+table {
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+table, td {
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+thead, tfoot {
+    background-color:  rgb(236, 236, 236);
+    border-radius: 7px 2px 7px 2px;
+    color: black;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+thead,th {
+    border-radius: 7px 2px 7px 2px;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+tbody, td {
+    border: 10px solid  rgb(236, 236, 236);
+    border-radius: 7px 2px 7px 2px;
+    background-color:  rgb(236, 236, 236);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.sameValCol {
+    margin: 5px;
+    align-items: center;
+}
+
+#searchDiv {
+    align-items: center;
+    justify-items: center;
+}

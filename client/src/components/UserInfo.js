@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 var usuario = { // info vem do backend dps
     nome: "Fulano da Silva",
@@ -17,15 +18,27 @@ function UserImg() {
   
 
 export default function UserInfo() {
-return (
-    <>
-    <UserImg />
-    <div>
-        <h3>Nome: {usuario.nome}</h3>
-        <h3>CPF: {usuario.cpf}</h3>
-        <h3>SUS: {usuario.sus}</h3>
-    </div>
-    </>
-);
+  const [backendData, setBackendData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/api/usersJson").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      }
+    )
+  }, [])
+
+  return (
+      <>
+      <UserImg />
+      <div>
+          <h3>Nome: {usuario.nome}</h3>
+          <h3>CPF: {usuario.cpf}</h3>
+          <h3>SUS: {usuario.sus}</h3>
+      </div>
+      </>
+  );
 }
 

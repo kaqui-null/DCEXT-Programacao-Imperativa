@@ -10,7 +10,7 @@ export default function SearchBar() {
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api").then(
+    fetch("/api/examesJson").then(
       response => response.json()
     ).then(
       data => {
@@ -39,7 +39,7 @@ export default function SearchBar() {
 
       <table>
         <thead>
-          <tr><th colSpan={5}>Nome do exame</th></tr>
+          <tr><th colSpan={6}>Nome do exame</th></tr>
         </thead>
         <tbody>
           {backendData.filter((val) => {
@@ -53,9 +53,10 @@ export default function SearchBar() {
           return <tr key={key}>
               <td className="sameValCol"> {val.nome} </td>
               <td className="sameValCol"> {val.hospital}</td>
-              <td className="sameValCol"> {val['data de liberação']}</td>
-              <td className="sameValCol"> {val['data de recebimento']}</td>
+              <td className="sameValCol"> Data de Liberação: {val['data de liberação']}</td>
+              <td className="sameValCol"> Data de Recebimento: {val['data de recebimento']}</td>
               <td className="sameValCol"> {val.status} </td>
+              <td className='sameValCol'> {val.url} </td>
             </tr>;
           })}
         </tbody>

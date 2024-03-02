@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
+import "./UserInfo.css"
+
 var usuario = { // info vem do backend dps
     nome: "Fulano da Silva",
     cpf: "111.222.333-44",
@@ -33,10 +35,9 @@ export default function UserInfo() {
   return (
       <>
       <UserImg />
-      <div>
-          <h3>Nome: {usuario.nome}</h3>
-          <h3>CPF: {usuario.cpf}</h3>
-          <h3>SUS: {usuario.sus}</h3>
+      <div className='basicUsrInfo'>
+          <h3>Nome: {backendData[0].nome}</h3>
+          <h3>CPF: {backendData[0].cpf}</h3>
       </div>
       </>
   );

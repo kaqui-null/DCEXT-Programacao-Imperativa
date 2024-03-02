@@ -19,8 +19,9 @@ fs.readFile('json_api_modules/users.json', 'utf8', function (err, data) {
 app.get("/api/examesJson", (req, res) => {
     res.json(examesObj);
 })
+
 app.get("/api/usersJson", (req, res) => {
-  res.json({"users": ["usr1", "usr2", "usr3", "usr4"]})
+  res.json(usersObj)
 })
 
 app.listen(5000, () => console.log("server running on port 5000"));

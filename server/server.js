@@ -10,7 +10,6 @@ fs.readFile('exames.json', 'utf8', function (err, data) {
   examesObj = JSON.parse(data);
 });
 
-
 app.get("/api", (req, res) => {
     res.json(examesObj);
 })

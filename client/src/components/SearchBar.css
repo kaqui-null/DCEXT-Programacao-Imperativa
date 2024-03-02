@@ -4,6 +4,21 @@
     height: auto;
 }
 
+#searchDiv {
+    display: grid;
+}
+
+#searchTable {
+    height: 10vh;
+}
+#searchBarInput {
+    height: 4vh;
+    width: 50vw;
+    border-radius: 5px 0 5px 0;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    border: 3px solid rgb(236, 236, 236);
+}
+
 table {
     text-align: center;
     width: 700px;

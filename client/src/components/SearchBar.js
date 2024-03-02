@@ -1,4 +1,3 @@
-import exames from '../exames.json'
 import { useState , useEffect } from 'react'
 import React from 'react'
 
@@ -26,9 +25,6 @@ export default function SearchBar() {
     <div id='searchDiv'>
       <div id='searchTable'>
           <form>
-          <label htmlFor='header-search'>
-            <span>Pesquise exames: </span>
-          </label>
           <input 
             type="text" 
             placeholder='Pesquisar exames' 
@@ -38,7 +34,6 @@ export default function SearchBar() {
               setSearchTerm(event.target.value);
             }}
           ></input>
-          <button type='submit' id='searchButton'><img className="ImageSearch" src={require("../imgs/search_icon.webp")} alt='Pesquise'/></button>
         </form>
       </div>
 

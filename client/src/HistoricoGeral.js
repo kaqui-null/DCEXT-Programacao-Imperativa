@@ -7,19 +7,6 @@ import SearchBar from './components/SearchBar'
 
 function HistoricoGeral() {
 
-  // backendData => json
-  const [backendData, setBackendData] = useState([{}])
-
-  useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, [])
-
   return (
     <>
       <div>

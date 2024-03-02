@@ -5,9 +5,15 @@ const app = express();
 var fs = require('fs');
 
 var examesObj;
-fs.readFile('exames.json', 'utf8', function (err, data) {
+fs.readFile('json_api_modules/exames.json', 'utf8', function (err, data) {
   if (err) throw err;
   examesObj = JSON.parse(data);
+});
+
+var usersObj;
+fs.readFile('json_api_modules/users.json', 'utf8', function (err, data) {
+  if (err) throw err;
+  usersObj = JSON.parse(data);
 });
 
 app.get("/api/examesJson", (req, res) => {

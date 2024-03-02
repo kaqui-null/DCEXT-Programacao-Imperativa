@@ -4,7 +4,8 @@
         "nome" : "exame de sangue",
         "hospital" : "A",
         "data de recebimento" : "11/05/2012",
-        "data de liberação" : "20/05/2012"
+        "data de liberação" : "20/05/2012",
+        "status":"2"
     },
     {
         "id" : 2,

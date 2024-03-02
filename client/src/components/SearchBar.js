@@ -47,7 +47,7 @@ export default function SearchBar() {
           <tr><th colSpan={5}>Nome do exame</th></tr>
         </thead>
         <tbody>
-          {exames.filter((val) => {
+          {backendData.filter((val) => {
             if (searchTerm === '') {
               return val;
             }
@@ -62,7 +62,6 @@ export default function SearchBar() {
               <td className="sameValCol"> {val['data de recebimento']}</td>
               <td className="sameValCol"> {val.status} </td>
             </tr>;
-          
           })}
         </tbody>
       </table>

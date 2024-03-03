@@ -24,7 +24,6 @@ function Cabecalho(){
       <div className='cabecalho'>
         <button className='botao_menu' onClick={Info}><img className='img_botao_menu' src={icone_menu} alt=''></img></button>
         <img className='img_logo_sch' src={sch} alt=''></img>
-      </div>
         {mostrarInfo && (
           <div className='opcoes_do_menu'>
             <p>
@@ -35,37 +34,17 @@ function Cabecalho(){
             </p>
           </div>
         )}
+      </div>
     </header>
   );
 }
 
 function TabelaExame(){
-  return(
-    <div className="tabela">
-      <table>
-        <thead>
-          <tr><th colSpan="4">NOME DO EXAME</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>exame 1</td>
-            <td>LINK PARA ACESSO</td>
-            <td>LINK PARA DOWNLOAD</td>
-            <td>status</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function Informacoes(){
-
-  const [backendData, setBackendData] = useState(0)
+  const [backendData, setBackendData] = useState([{}])
 
 
   useEffect(()=> {
-    fetch("http://127.0.0.1:5000/api").then(
+    fetch("http://127.0.0.1:5000/api/examesJson").then(
       response => response.json()
     ).then(
       data => {
@@ -75,16 +54,48 @@ function Informacoes(){
   }, [])
 
   return(
+    <div className="tabela">
+      <table>
+        <thead>
+          <tr><th colSpan="4">NOME DO EXAME</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>exame 1</td>
+            <td>LINK PARA ACESSO: {backendData[0]['url acesso']}</td>
+            <td>LINK PARA DOWNLOAD: {backendData[0]['url download']}</td>
+            <td>status</td>
+          </tr>
+          <tr>
+          <td>exame 2</td>
+            <td>LINK PARA ACESSO: {backendData[0]['url acesso']}</td>
+            <td>LINK PARA DOWNLOAD: {backendData[0]['url download']}</td>
+            <td>status</td>
+          </tr>
+          <tr>
+          <td>exame 3</td>
+            <td>LINK PARA ACESSO: {backendData[0]['url acesso']}</td>
+            <td>LINK PARA DOWNLOAD: {backendData[0]['url download']}</td>
+            <td>status</td>
+          </tr>
+          <tr>
+          <td>exame 4</td>
+            <td>LINK PARA ACESSO: {backendData[0]['url acesso']}</td>
+            <td>LINK PARA DOWNLOAD: {backendData[0]['url download']}</td>
+            <td>status</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function Informacoes(){
+  return(
     <div className="informacoes">
-      {(typeof backendData.hospital === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.hospital.map((hospital,i) => (
-        <div>
-          <p><strong>HOSPITAL: </strong><span key={i} className="hospital_exame">{hospital}</span></p>
-        </div>
-        ))
-      )}
+      
+      <p><strong>HOSPITAL: </strong><span className="hospital_exame"></span></p>
       <p><strong>DATA DE REALIZAÇÃO: </strong><span className="data_real_exame"></span></p>
       <p><strong>DATA LIBERAÇÃO: </strong><span className="data_lib_exame"></span></p>
       <p><strong>STATUS: </strong><span className="status_exame"></span></p>

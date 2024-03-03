@@ -1,0 +1,69 @@
+.form{
+  width: 20em;
+  margin: 0 auto;
+  padding: 3em;
+}
+
+.form h1{
+  margin-bottom: 0.8em;
+  font-size: 1.9em;
+  color: #163e71;
+}
+
+.form p{
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.red_senha{
+  display: flex;
+ justify-content: flex-end ;
+}
+
+.red_senha a {
+  color: #163e71 ;
+  text-decoration: none ;
+  font-size: 13px;
+}
+.red_senha a:hover{
+  color: rgb(161, 16, 16);
+}
+
+.cadastro{
+  display: flex;
+ justify-content: center ;
+}
+
+.cadastro a {
+  color: #163e71 ;
+  text-decoration: none ;
+  font-size: 13px;
+}
+.cadastro a:hover{
+  color: rgb(161, 16, 16);
+}
+
+.botao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #163e71;
+  margin: auto;
+  margin-bottom: 1.3em;
+  margin-top: .6em;
+  border-radius: 7px 2px 7px 2px;
+  padding: 0.01em .3em;
+  width: 10em;
+  height: 2.3em; 
+  
+}
+.botao a {
+  color: white ;
+  text-decoration: none ;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.botao:hover{
+  color: rgb(161, 16, 16);
+}

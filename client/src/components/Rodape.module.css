@@ -1,0 +1,16 @@
+.rodape{
+    background-color: #163e71;
+    color: aliceblue;
+    padding: 1%;
+    text-align: center;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.txt{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

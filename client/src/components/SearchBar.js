@@ -37,7 +37,8 @@ export default function SearchBar() {
         </form>
       </div>
 
-      <table>
+      <div className='tabela'>
+        <table>
         <thead>
           <tr><th colSpan={6}>Nome do exame</th></tr>
         </thead>
@@ -61,6 +62,8 @@ export default function SearchBar() {
           })}
         </tbody>
       </table>
+        </div>
+
     </div>
   );
 }

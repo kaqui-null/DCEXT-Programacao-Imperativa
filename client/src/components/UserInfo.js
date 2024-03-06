@@ -17,7 +17,7 @@ export default function UserInfo() {
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api/usersJson").then(
+    fetch("http://localhost:5000/api/usersJson").then(
       response => response.json()
     ).then(
       data => {

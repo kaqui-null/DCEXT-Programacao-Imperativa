@@ -10,7 +10,7 @@ export default function SearchBar() {
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api/examesJson").then(
+    fetch("http://localhost:5000/api/examesJson").then(
       response => response.json()
     ).then(
       data => {

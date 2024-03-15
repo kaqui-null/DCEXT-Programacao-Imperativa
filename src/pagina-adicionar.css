@@ -1,0 +1,47 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .inicio {
+    background-color: blue;
+    border-radius: 20px;
+  }
+  .img_logo_sch {
+    width: 45px; 
+    height: 35px;
+  }
+  
+  div {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+    }
+  
+  h2 {
+      text-align: center;
+      color: black;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      background-color: white;
+      border-radius: 20px;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    button {
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    
+    input,
+    select {
+      padding: 4px;
+      border: 1px solid black;
+    }

@@ -12,7 +12,7 @@ export default function TabelaDetalhamentoExame(){
         setBackendData(data)
       }
     )
-  })
+  }, [])
 
     return(
         <div className="tabela">
@@ -23,13 +23,13 @@ export default function TabelaDetalhamentoExame(){
           <tbody>
             <tr>
               <td>exame 1</td>
-              <td>LINK PARA ACESSO: {backendData[0]['url acesso']}</td>
+              <td>LINK PARA ACESSO: {backendData.a.url}</td>
               <td>LINK PARA DOWNLOAD: </td>
               <td>status</td>
             </tr>
             <tr>
             <td>exame 2</td>
-              <td>LINK PARA ACESSO: </td>
+              <td>LINK PARA ACESSO:</td>
               <td>LINK PARA DOWNLOAD: </td>
               <td>status</td>
             </tr>

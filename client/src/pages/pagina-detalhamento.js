@@ -1,4 +1,4 @@
-import Cabecalho from './components/cabecalho';
+import Cabecalho from './components/cabecalho-detalhamento.js';
 import Tabela from './components/tabela-detalhamento'
 import Informacoes from './components/informacoes'
 import './pagina-detalhamento-geral.css';

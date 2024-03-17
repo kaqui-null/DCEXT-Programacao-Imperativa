@@ -30,7 +30,7 @@ export default function UserInfo() {
       <div className='total'>
         <UserImg />
         <div className='basicUsrInfo'>
-            <h3>Nome: {backendData[0].nome}</h3>
+            <h3>Nome: {backendData[0]['nome']}</h3>
             <h3>CPF: {backendData[0].cpf}</h3>
         </div>
       </div>

@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-<<<<<<<< HEAD:pagina-login/client/index.js
-import Login from './login'
-========
+//import Login from './login'
 import HistoricoGeral from './HistoricoGeral';
->>>>>>>> main:client/src/index.js
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<<<<<<<< HEAD:pagina-login/client/index.js
-    <Login/> 
-========
     <HistoricoGeral />
->>>>>>>> main:client/src/index.js
   </React.StrictMode>
 );
 

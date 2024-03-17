@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /*espaça os elementos de forma igual */
+  margin: 0 auto;
+  flex: wrap;
+}
+
+.min-height{
+  min-height: 75vh; /* _Isso vai manter o rodapé embaixo.    _"vh" no CSS representa a porcentagem da altura da viewport (janela de visualização) do navegador. "vh"--- "viewport height"*/
+}
+
+.start{
+  justify-content: flex-start;
+}
+
+.column{
+  flex-direction: column; /* muda pra colunas já que o flexbox já deixa organizado em linhas*/
+  justify-content: flex-start;
+}

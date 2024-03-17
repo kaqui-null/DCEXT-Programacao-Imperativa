@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 import "./UserInfo.css"
 
-
+//pull request addition
 function UserImg() {
     return (
       <div className='UsrImg'>

@@ -1,0 +1,26 @@
+
+.UsrImg {
+    float:left;
+    margin-bottom: 0px;
+}
+
+.basicUsrInfo {
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(236, 236, 236);
+}
+
+.total {
+    display: flex;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(22, 62, 113);
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 1%;
+    margin: 10px;
+    margin-top: 20px;
+}
+

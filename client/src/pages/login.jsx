@@ -1,14 +1,14 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import './login.css';
-import Cabecalho from '../../../pagina-login/client/src/componentes/Cabecalho';
-import Rodape from '../../../pagina-login/client/src/componentes/Rodape';
-import Container from '../../../pagina-login/client/src/componentes/Container';
-import LinkBotao from '../../../pagina-login/client/src/componentes/LinkBotao';
-import Medico from '../../../pagina-login/client/src/componentes/pages/Medico';
-import Paciente from '../../../pagina-login/client/src/componentes/pages/Paciente';
-import Cadastro from '../../../pagina-login/client/src/componentes/form/Cadastro'; 
-import Redefinir from '../../../pagina-login/client/src/componentes/form/Redefinir'; 
+import Cabecalho from './components/Cabecalho.jsx';
+import Rodape from './components/Rodape.jsx';
+import Container from './components/Container.jsx';
+import LinkBotao from './components/LinkBotao.jsx';
+import Medico from './components/pages/Medico.jsx';
+import Paciente from './components/pages/Paciente.jsx';
+import Cadastro from './components/form/Cadastro.jsx'; 
+import Redefinir from './components/form/Redefinir.jsx'; 
 
 function Login() {
   return (

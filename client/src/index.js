@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import Login from './login'
 import HistoricoGeral from './pages/HistoricoGeral';
+import Login from './pages/login';
+import PaginaDetalhamento from './pages/pagina-detalhamento'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HistoricoGeral />
+    < PaginaDetalhamento />
   </React.StrictMode>
 );
 

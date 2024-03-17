@@ -1,6 +1,6 @@
-import Cabecalho from './componentes/cabecalho';
-import Tabela from './componentes/tabela-detalhamento'
-import Informacoes from './componentes/informacoes'
+import Cabecalho from './components/cabecalho';
+import Tabela from './components/tabela-detalhamento'
+import Informacoes from './components/informacoes'
 import './pagina-detalhamento-geral.css';
 
 function PaginaDetalhamento() {

@@ -1,7 +1,7 @@
 import "./cabecalho.css"
 import React, {useState} from "react";
-import icone_menu from '../imgs/icone-menu.png'
-import icone_sch from '../imgs/sch.png'
+import icone_menu from '../../imgs/icone-menu.png'
+import icone_sch from '../../imgs/sch.png'
 
 export default function Cabecalho(){
     const [mostrarInfo, setMostrarInfo] = useState(false);

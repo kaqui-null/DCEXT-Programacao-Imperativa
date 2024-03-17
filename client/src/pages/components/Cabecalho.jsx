@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Link} from 'react-router-dom'
-import schimg from '../img/sch-link.svg';
+import schimg from '../../imgs/sch-link.svg';
 // import icone_menu from '../img/icone_menu.png';
 
 import styles from './Cabecalho.module.css';

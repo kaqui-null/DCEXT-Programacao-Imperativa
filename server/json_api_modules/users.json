@@ -1,0 +1,19 @@
+
+[
+    {   
+        "nome":"Fulano da Silva",
+        "cpf":"11122233344",
+        "email":"example@email.com",
+        "data de nascimento":"11/22/3333",
+        "telefone":"11922223333",
+        "senha":"senha123"
+    },
+    {   
+        "nome":"Fulano da Silva2",
+        "cpf":"11122233344 2",
+        "email":"example@email.com",
+        "data de nascimento":"11/22/3333",
+        "telefone":"11922223333",
+        "senha":"senha123"
+    }
+]

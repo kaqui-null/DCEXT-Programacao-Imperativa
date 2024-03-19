@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import './PaginaMedico.css';
 import ExamePage from './ExamePage';
 
-function App() {
+function PaginaMedico() {
   return (
     <div className="App">
       <ExamePage />
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default PaginaMedico;

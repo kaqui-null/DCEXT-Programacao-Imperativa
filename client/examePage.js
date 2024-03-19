@@ -18,7 +18,7 @@ function App() {
     <Router>
       <div>
         <div className="logo-container">
-          <img src="schcb.png" alt="Logo" width="200" height="100" />
+          <img src="./imgs/schcb.png" alt="Logo" width="200" height="100" />
         </div>
         <div className="linha"></div>
         <menu>

@@ -11,7 +11,7 @@ import PaginaMedico from './PaginaMedico';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    < PaginaMedico />
+    < HistoricoGeral />
   </React.StrictMode>
 );
 

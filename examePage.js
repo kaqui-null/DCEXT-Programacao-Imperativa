@@ -1,11 +1,17 @@
-import React, { useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import './App.css';
 import ExamePage from './novoExame';
 import NovoCadrastro from './cadrastro';
 import TabelaExames from './TabelaExames';
 
-function App() {
+const App = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
 
   const handleUpload = useCallback(() => {
     const pdfInput = document.getElementById('pdfInput');
@@ -27,36 +33,35 @@ function App() {
           <div className="menu-item">Sair</div>
         </menu>
         <header></header>
-      <div className="center-container">
-        <div className="tipoAcesso">
-          <h1>Área Médica</h1>
-          <h3>Selecione uma opção:</h3>
+        <div className="center-container">
+          <div className="tipoAcesso">
+            <h1>Área Médica</h1>
+            <h3>Selecione uma opção:</h3>
 
-          <button className="botao">
-            <Link to="/novoExame">Inserir Exame</Link>
-          </button>
+            <Button className="botao">
+              <Link to="/novoExame">Inserir Exame</Link>
+            </Button>
 
-          <button className="botao">
-          <Link to="/TabelaExames">Lista da Pacientes</Link>  
-          </button>
+            <Button className="botao">
+              <Link to="/TabelaExames">Lista da Pacientes</Link>  
+            </Button>
 
-          <button className="botao">
-          <Link to="/cadrastro">Inserir Novo Paciente</Link>  
-          </button>
+            <Button className="botao">
+              <Link to="/cadrastro">Inserir Novo Paciente</Link>  
+            </Button>
 
-          <button className="botao" onClick={handleUpload}>
-            Adicionar Novo Resultado
-          </button>
+            <input id="pdfInput" type="file" accept=".pdf" style={{ display: 'none' }} onChange={handleFileChange} />
+            <Button className="botao" onClick={handleUpload}>
+              Adicionar Novo Resultado
+            </Button>
 
-          <Routes>
-          <Route path="/novoExame" element={<ExamePage />} />
-          <Route path="/cadrastro" element={<NovoCadrastro />} />
-          <Route path="/TabelaExames" element={<TabelaExames />} />
-        </Routes>
-
+            <Routes>
+              <Route path="/novoExame" element={<ExamePage selectedFile={selectedFile} />} />
+              <Route path="/cadrastro" element={<NovoCadrastro />} />
+              <Route path="/TabelaExames" element={<TabelaExames />} />
+            </Routes>
+          </div>
         </div>
-        
-      </div>
       </div>
     </Router>
   );

@@ -20,7 +20,7 @@ export default function SearchBar() {
   }, [])
 
   const [searchTerm, setSearchTerm] = useState('');
-
+  
   return (
     <div id='searchDiv'>
       <div id='searchTable'>

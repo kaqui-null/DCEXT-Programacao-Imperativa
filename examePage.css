@@ -1,3 +1,5 @@
+
+
 body {
   background-color: rgb(216, 217, 228);
   margin: 0;
@@ -107,4 +109,14 @@ button:hover {
 
 button:active {
   background-color: #ffffff;
+}
+
+.botao a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.botao a:hover {
+  text-decoration: underline;
 }

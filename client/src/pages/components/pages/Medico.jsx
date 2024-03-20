@@ -1,4 +1,4 @@
-import LoginForm from '../form/LoginForm'
+import LoginForm from '../form/LoginFormMedico'
 import React, {useState, useEffect} from 'react';
 
 function Medico(){

@@ -24,7 +24,7 @@ fs.readFile('json_api_modules/users.json', 'utf8', function (err, data) {
 
 app.get("/api/usersJson", (req, res) => {
     res.json(usersObj)
-  })
+})
 
 app.get('/',(req,res) =>{
     res.send('hello world!');

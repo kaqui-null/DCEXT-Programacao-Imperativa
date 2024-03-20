@@ -8,7 +8,11 @@ import LinkBotao from './components/LinkBotao.jsx';
 import Medico from './components/pages/Medico.jsx';
 import Paciente from './components/pages/Paciente.jsx';
 import Cadastro from './components/form/Cadastro.jsx'; 
-import Redefinir from './components/form/Redefinir.jsx'; 
+import Redefinir from './components/form/Redefinir.jsx';
+import PaginaMedico from '../PaginaMedico';
+import PaginaDetalhamento from './pagina-detalhamento'
+import HistoricoGeral from './HistoricoGeral';
+
 
 function Login() {
   return (
@@ -23,6 +27,8 @@ function Login() {
           <Route path="/Paciente" element={<Paciente/>}></Route>
           <Route path="/Cadastro" element={<Cadastro/>}></Route>
           <Route path="/RedefinirSenha" element={<Redefinir/>}></Route>
+          <Route path='/Exames' element={<HistoricoGeral/>}></Route>
+          <Route path='/ExamesMe' element={<PaginaMedico/>}></Route>
           </Routes>
         </Container>
         <>

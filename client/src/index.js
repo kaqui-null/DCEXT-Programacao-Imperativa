@@ -7,11 +7,12 @@ import Login from './pages/login';
 import PaginaDetalhamento from './pages/pagina-detalhamento'
 import reportWebVitals from './reportWebVitals';
 import PaginaMedico from './PaginaMedico';
+import LinkBotao from './pages/components/LinkBotao';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    < HistoricoGeral />
+    <Login></Login>
   </React.StrictMode>
 );
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './ExamePage.css';
+import { Link } from 'react-router-dom';
 
 const ExamePage = () => {
   const FichaMedica = () => {
@@ -267,6 +268,11 @@ const ExamePage = () => {
           <button onClick={EnviarFichaMedica}>Enviar Ficha Médica</button>
           {mensagem && <div className="mensagem">{mensagem}</div>}
         </div>
+
+        <Link to="/ExamePage">
+            <button>Voltar</button>
+          </Link>
+
       </div>
     );
   };

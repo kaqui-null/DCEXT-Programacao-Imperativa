@@ -1,4 +1,4 @@
-import './HistoricoGeral.css'
+import styles from './HistoricoGeral.css'
 
 import UserInfo from './components/UserInfo'
 import SearchBar from './components/SearchBar'
@@ -11,7 +11,7 @@ function HistoricoGeral() {
     <>
       <div>
         <Cabecalho />
-        <div className='UsrInfoDiv'>
+        <div className={styles.UsrInfoDiv}>
           <UserInfo />
         </div>
         <div>

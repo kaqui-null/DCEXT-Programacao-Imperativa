@@ -57,7 +57,7 @@ export default function SearchBar() {
               <td className="sameValCol"> Data de Liberação: {val['data de liberação']}</td>
               <td className="sameValCol"> Data de Recebimento: {val['data de recebimento']}</td>
               <td className="sameValCol"> {val.status} </td>
-              <td className='sameValCol'></td>
+              <td className='sameValCol'> <a href={val.__html}>link</a></td>
             </tr>;
           })}
         </tbody>

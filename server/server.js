@@ -30,6 +30,13 @@ app.get('/',(req,res) =>{
     res.send('hello world!');
 });
 
+app.get('/asset', function(req, res) {
+    var pdf= fs.readFileSync("./json_api_modules/test.pdf")
+    res.contentType("application/pdf")
+    res.send(pdf)
+})
+
+
 app.listen(5000, () => {
     console.log('listening on port 5000');
 });

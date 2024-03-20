@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ExamePage.css';
 import TabelaExames from './TabelaExames';
-
+import { Link } from 'react-router-dom';
 
 const NovoCadrastro = () => {
     const FichaCadrastro = () => {
@@ -97,7 +97,6 @@ const CarregarExames = async () => {
 };
 
 useEffect(() => {
-  // Carrega os exames ao iniciar o componente
   CarregarExames();
 }, []);
 
@@ -259,6 +258,11 @@ useEffect(() => {
             <button onClick={EnviarCadrastro}>Enviar Cadrastro</button>
             {mensagem && <div className="mensagem">{mensagem}</div>}
         </div>
+
+        <Link to="/ExamePage">
+            <button>Voltar</button>
+          </Link>
+
         <TabelaExames dados={exames} />
     </div>
     );

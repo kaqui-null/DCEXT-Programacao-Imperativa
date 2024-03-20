@@ -6,11 +6,12 @@ import HistoricoGeral from './pages/HistoricoGeral';
 import Login from './pages/login';
 import PaginaDetalhamento from './pages/pagina-detalhamento'
 import reportWebVitals from './reportWebVitals';
+import PaginaMedico from './PaginaMedico';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    < HistoricoGeral />
+    < PaginaMedico />
   </React.StrictMode>
 );
 

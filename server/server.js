@@ -34,6 +34,8 @@ app.post("/api/usersCadastro", (req, res) => {
     fs.writeFileSync('json_api_modules/users.json', JSON.stringify(usersObj));
 })
 
+
+
 app.get('/',(req,res) =>{
     res.send('hello world!');
 });

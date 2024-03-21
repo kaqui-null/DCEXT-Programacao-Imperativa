@@ -2,9 +2,11 @@ import {Link} from 'react-router-dom'
 import styles from './Cadastro.module.css';
 import Input from '../Input'
 import React, {useState} from 'react';
+import axios from 'axios'
 
 function Cadastro(){
 
+  const [post, setpost] = useState(null)
   const [nome, setnome] = useState('');
   const [cpf, setcpf] = useState('');
   const [email, setemail] = useState('');
@@ -12,11 +14,19 @@ function Cadastro(){
   const[telefone, settelefone] = useState('');
   const [password, setpassword] = useState('');
 
+
+  console.log(post)
   const handleCadastro = async (e) => {
     e.preventDefault();
-
+    
     console.log(nome, cpf, email, data,telefone,password);
-  }
+
+    const response = await axios.post('http://localhost:5000/api/usersCadastro', 
+    JSON.stringify({nome, cpf, email, data, telefone, password}),
+    {
+      headers : {'content-type' : 'application/json'}
+    })}
+
 
   return(
     <div className={styles.formCadastro}>

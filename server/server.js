@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 var fs = require('fs')
+const routes = require('./routes')
 
 app.use(cors())
 app.use(express.json());
+app.use(routes)
 
 var examesOBJ;
 fs.readFile('json_api_modules/exames.json', 'utf8', function(err,data){
@@ -24,6 +26,12 @@ fs.readFile('json_api_modules/users.json', 'utf8', function (err, data) {
 
 app.get("/api/usersJson", (req, res) => {
     res.json(usersObj)
+})
+
+app.post("/api/usersCadastro", (req, res) => {
+    res.json(usersObj)
+    usersObj[0]=req.body
+    fs.writeFileSync('json_api_modules/users.json', JSON.stringify(usersObj));
 })
 
 app.get('/',(req,res) =>{

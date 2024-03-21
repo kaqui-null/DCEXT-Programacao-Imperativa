@@ -15,7 +15,7 @@ function Cadastro(){
   const handleCadastro = async (e) => {
     e.preventDefault();
 
-    console.log('oi dani');
+    console.log(nome, cpf, email, data,telefone,password);
   }
 
   return(
@@ -28,37 +28,48 @@ function Cadastro(){
       text="Nome completo:"
       name="name"
       placeholder="Insira seu nome completo" 
-      onChange={(e) => setnome(e.target.value)}
+      required 
+      handleOnChange = {(e) => setnome(e.target.value)}
       />
       <Input
       type="text"
       text="CPF:"
       name="text"
       placeholder="000.000.000-00" 
+      required 
+      handleOnChange = {(e) => setcpf(e.target.value)}
       />
       <Input
       type="text"
       text="Email:"
       name="name"
       placeholder="ex: abcd@email.com" 
+      required 
+      handleOnChange = {(e) => setemail(e.target.value)}
       />
       <Input
       type="date"
       text="Data de nascimento:"
       name="data"
-      placeholder="" 
+      placeholder=""
+      required 
+      handleOnChange = {(e) => setdata(e.target.value)}
       />
       <Input
       type="tel"
       text="Telefone:"
       name="telefone"
-      placeholder="(00) 00000-0000" 
+      placeholder="(00) 00000-0000"
+      required 
+      handleOnChange = {(e) => settelefone(e.target.value)}
       />
       <Input
       type="password"
       text="Crie uma senha:"
       name="password"
       placeholder="Insira uma senha com no minimo 6 dígitos" 
+      required 
+      handleOnChange = {(e) => setpassword(e.target.value)}
       />
       
       <button type='submit' className={styles.botao} onClick={(e) => handleCadastro(e)}>

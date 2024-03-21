@@ -1,8 +1,23 @@
 import {Link} from 'react-router-dom'
 import styles from './Cadastro.module.css';
 import Input from '../Input'
+import React, {useState} from 'react';
 
 function Cadastro(){
+
+  const [nome, setnome] = useState('');
+  const [cpf, setcpf] = useState('');
+  const [email, setemail] = useState('');
+  const [data, setdata] = useState('');
+  const[telefone, settelefone] = useState('');
+  const [password, setpassword] = useState('');
+
+  const handleCadastro = async (e) => {
+    e.preventDefault();
+
+    console.log('oi dani');
+  }
+
   return(
     <div className={styles.formCadastro}>
     <h1>Cadastrar</h1>
@@ -13,6 +28,7 @@ function Cadastro(){
       text="Nome completo:"
       name="name"
       placeholder="Insira seu nome completo" 
+      onChange={(e) => setnome(e.target.value)}
       />
       <Input
       type="text"
@@ -45,18 +61,12 @@ function Cadastro(){
       placeholder="Insira uma senha com no minimo 6 dígitos" 
       />
       
-      <li className={styles.botao}>
-        <Link to="/Entrar">Cadastrar</Link>
-      </li>
+      <button type='submit' className={styles.botao} onClick={(e) => handleCadastro(e)}>
+        Cadastrar
+      </button>
       
     </form>
     </div>
-
-
-
-
-
-
 
   )
 }

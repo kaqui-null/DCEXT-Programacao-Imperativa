@@ -49,6 +49,7 @@ function LoginForm(){
     } }
 
 
+<<<<<<< HEAD
 
 
   return (
@@ -65,6 +66,11 @@ function LoginForm(){
         </div>
      })
       )}
+=======
+  return(
+    <div className={styles.form}>
+     
+>>>>>>> d2b931c491efe4116a416e58462ab6ead2d944de
     <h1>Resultados de Exames</h1>
     <p>Login</p>
     <form >
@@ -85,12 +91,19 @@ function LoginForm(){
       required 
       handleOnChange = {(e) => setpassword(e.target.value)}
       />
+<<<<<<< HEAD
       
       <button type='submit' className={styles.botao} onClick={(e) => handleCadastro(e)}>
         Entrar
       </button>
       
       
+=======
+     
+      <li className={styles.botao}>
+        <Link to="/Exames">Entrar</Link>
+      </li>
+>>>>>>> d2b931c491efe4116a416e58462ab6ead2d944de
       <li className={styles.cadastro}>
       <Link  to= "/Cadastro">ME CADASTRAR</Link>
       </li>

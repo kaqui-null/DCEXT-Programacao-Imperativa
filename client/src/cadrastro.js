@@ -265,28 +265,28 @@ useEffect(() => {
   };
   
 
-  return (
-    <div className="menu-wrapper">
-      <div className="linha"></div>
-      <div className="logo-container">
-        <img src="schcb.png" alt="Logo" width="200" height="100" />
-      </div>
+  // return (
+  //   <div className="menu-wrapper">
+  //     <div className="linha"></div>
+  //     <div className="logo-container">
+  //       <img src="schcb.png" alt="Logo" width="200" height="100" />
+  //     </div>
       
-      <menu>
-        <div className="menu-item">Inicio</div>
-        <div className="menu-item">Serviços</div>
-        <div className="menu-item">Sair</div>
-      </menu>
-      <header>
-      </header>
-      <div class="nova-barra">
-      </div>
-      <div className="page-container">
-        <FichaCadrastro />
-      </div>
-      <div style={{ position: 'absolute', top: '2090px', backgroundColor: '#163e71', height: '15vh', left: 0 , width: '100%' }}>
-      </div>
-    </div>
-  );
+  //     <menu>
+  //       <div className="menu-item">Inicio</div>
+  //       <div className="menu-item">Serviços</div>
+  //       <div className="menu-item">Sair</div>
+  //     </menu>
+  //     <header>
+  //     </header>
+  //     <div class="nova-barra">
+  //     </div>
+  //     <div className="page-container">
+  //       <FichaCadrastro />
+  //     </div>
+  //     <div style={{ position: 'absolute', top: '2090px', backgroundColor: '#163e71', height: '15vh', left: 0 , width: '100%' }}>
+  //     </div>
+  //   </div>
+  // );
 };
 export default NovoCadrastro;

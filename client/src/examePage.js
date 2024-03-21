@@ -15,9 +15,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    // <Router>
       <div>
-        <div className="logo-container">
+        {/* <div className="logo-container">
           <img src="./imgs/schcb.png" alt="Logo" width="200" height="100" />
         </div>
         <div className="linha"></div>
@@ -26,39 +26,39 @@ function App() {
           <div className="menu-item">Serviços</div>
           <div className="menu-item">Sair</div>
         </menu>
-        <header></header>
-      <div className="center-container">
+        <header></header> */}
+      <div className="ficha-container">
         <div className="tipoAcesso">
           <h1>Área Médica</h1>
           <h3>Selecione uma opção:</h3>
 
-          <button className="botao">
+          <button className="button">
             <Link to="/novoExame">Inserir Exame</Link>
           </button>
 
-          <button className="botao">
+          <button className="button">
           <Link to="/TabelaExames">Lista da Pacientes</Link>  
           </button>
 
-          <button className="botao">
+          <button className="button">
           <Link to="/cadrastro">Inserir Novo Paciente</Link>  
           </button>
 
-          <button className="botao" onClick={handleUpload}>
+          <button className="button" onClick={handleUpload}>
             Adicionar Novo Resultado
           </button>
 
-          <Routes>
-          <Route path="/novoExame" element={<ExamePage />} />
-          <Route path="/cadrastro" element={<NovoCadrastro />} />
-          <Route path="/TabelaExames" element={<TabelaExames />} />
-        </Routes>
+           <Routes> 
+          <Route path="/novoExame" component={<ExamePage />} />
+          <Route path="/cadrastro" component={<NovoCadrastro />} />
+          <Route path="/TabelaExames" component={<TabelaExames />} />
+         </Routes> 
 
         </div>
         
       </div>
       </div>
-    </Router>
+    // </Router>
   );
 }
 

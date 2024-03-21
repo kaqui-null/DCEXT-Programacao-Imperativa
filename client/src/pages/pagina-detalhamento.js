@@ -6,7 +6,7 @@ import './pagina-detalhamento-geral.css';
 function PaginaDetalhamento() {
   return (
     <div>
-      <Cabecalho/>
+       {/* <Cabecalho/>  */}
       <Informacoes/>
       <Tabela/>
     </div>

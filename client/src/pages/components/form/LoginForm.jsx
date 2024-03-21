@@ -24,15 +24,7 @@ function LoginForm(){
 
   return(
     <div className={styles.form}>
-     {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.users.map((user,i) => (
-        <div>
-          <p key={i}>{user}</p>
-        </div>
-        ))
-      )}
+     
     <h1>Resultados de Exames</h1>
     <p>Login</p>
     <form >
@@ -49,9 +41,7 @@ function LoginForm(){
       name="password"
       placeholder="Insira sua senha" 
       />
-      <li className={styles.red_senha}>
-      <Link  to= "/RedefinirSenha">Redefinir senha</Link>
-      </li>
+     
       <li className={styles.botao}>
         <Link to="/Exames">Entrar</Link>
       </li>

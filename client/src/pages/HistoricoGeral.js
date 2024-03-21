@@ -10,14 +10,14 @@ function HistoricoGeral() {
   return (
     <>
       <div>
-        <Cabecalho />
+        {/* <Cabecalho /> */}
         <div className={styles.UsrInfoDiv}>
           <UserInfo />
         </div>
         <div>
           <SearchBar />
         </div>
-        <Rodape />
+        {/* <Rodape /> */}
       </div>
     </>
   );

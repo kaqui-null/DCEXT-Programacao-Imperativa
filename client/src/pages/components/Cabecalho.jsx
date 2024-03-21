@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Link} from 'react-router-dom'
 import schimg from '../../imgs/sch-link.svg';
+// import { Nav,NavDropdown } from 'react-bootstrap';
 // import icone_menu from '../img/icone_menu.png';
 
 import styles from './Cabecalho.module.css';
@@ -31,7 +32,14 @@ function Cabecalho(){
                 <li className={styles.item}>
                   <Link to= "/Entrar">Entrar</Link>
                 </li>
+                {/* <Nav>
+                <NavDropdown title="User name" className={styles.logout}>
+                  <NavDropdown.Item>Sair</NavDropdown.Item>
+                </NavDropdown>
+                </Nav> */}
               </ul>
+             
+
               
             </div>
           {/* )} */}

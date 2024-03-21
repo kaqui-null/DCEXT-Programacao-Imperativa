@@ -30,7 +30,7 @@ function Login() {
           </Routes>
         </Container>
         <>
-        <Rodape/>
+        
         </>
     </Router>
 

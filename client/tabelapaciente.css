@@ -1,0 +1,36 @@
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #163e71;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  button:hover {
+    background-color: #3d388f;
+  }
+  
+  button:active {
+    background-color: #ffffff;
+  }

@@ -24,7 +24,7 @@ const App = () => {
     <Router>
       <div>
         <div className="logo-container">
-          <img src="./imgs/schcb.png" alt="Logo" width="200" height="100" />
+        <img src="./imgs/schcb.png" alt="Logo" width="200" height="100" />
         </div>
         <div className="linha"></div>
         <menu>
@@ -43,7 +43,7 @@ const App = () => {
             </Button>
 
             <Button className="botao">
-              <Link to="/TabelaExames">Lista da Pacientes</Link>  
+              <Link to="/TabelaExames">Lista de Pacientes</Link>  
             </Button>
 
             <Button className="botao">
@@ -60,6 +60,7 @@ const App = () => {
               <Route path="/cadrastro" element={<NovoCadrastro />} />
               <Route path="/TabelaExames" element={<TabelaExames />} />
             </Routes>
+            
           </div>
         </div>
       </div>

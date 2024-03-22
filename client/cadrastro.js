@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './ExamePage.css';
-import TabelaExames from './TabelaExames';
 import { Link } from 'react-router-dom';
 
 const NovoCadrastro = () => {
@@ -37,7 +36,6 @@ const NovoCadrastro = () => {
       const [leito, setLeito] = useState('');
       const [observacoesAdicionais, setObservacoesAdicionais] = useState('');
       const [mensagem, setMensagem] = useState('');
-      const [exames, setExames] = useState([]);
   
       const EnviarCadrastro = async () => {
         try {
@@ -79,26 +77,12 @@ const NovoCadrastro = () => {
     console.log('Resposta do backend:', response.data);
     setMensagem('Ficha de Cadrastro enviada com sucesso!');
 
-    CarregarExames();
-
   } catch (error) {
     console.error('Erro ao enviar ficha de Cadrastro:', error);
     setMensagem('Erro ao enviar a ficha de Cadrastro. Tente novamente.');
   }
+  
 };
-
-const CarregarExames = async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/obter-exames');
-    setExames(response.data);
-  } catch (error) {
-    console.error('Erro ao carregar exames:', error);
-  }
-};
-
-useEffect(() => {
-  CarregarExames();
-}, []);
 
     return (
       <div className="ficha-medica-container">
@@ -263,7 +247,6 @@ useEffect(() => {
             <button>Voltar</button>
           </Link>
 
-        <TabelaExames dados={exames} />
     </div>
     );
   };
@@ -288,7 +271,7 @@ useEffect(() => {
       <div className="page-container">
         <FichaCadrastro />
       </div>
-      <div style={{ position: 'absolute', top: '2090px', backgroundColor: '#163e71', height: '15vh', left: 0 , width: '100%' }}>
+      <div style={{ position: 'absolute', top: '2190px', backgroundColor: '#163e71', height: '15vh', left: 0 , width: '100%' }}>
       </div>
     </div>
   );

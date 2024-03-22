@@ -32,11 +32,7 @@ function Cabecalho(){
                 <li className={styles.item}>
                   <Link to= "/Entrar">Entrar</Link>
                 </li>
-                {/* <Nav>
-                <NavDropdown title="User name" className={styles.logout}>
-                  <NavDropdown.Item>Sair</NavDropdown.Item>
-                </NavDropdown>
-                </Nav> */}
+               
               </ul>
              
 

@@ -11,6 +11,9 @@ import Cadastro from './components/form/Cadastro.jsx';
 import PaginaMedico from '../PaginaMedico';
 import PaginaDetalhamento from './pagina-detalhamento'
 import HistoricoGeral from './HistoricoGeral';
+import ExamePage from '../examePage';
+import NovoCadastro from '../cadrastro';
+import TabelaExames from '../TabelaExames';
 
 
 function Login() {
@@ -24,12 +27,17 @@ function Login() {
           <Route path="/Entrar" element={<Acesso/>}></Route>
           <Route path="/Medico" element={<Medico/>}></Route>
           <Route path="/Paciente" element={<Paciente/>}></Route>
+          <Route path="/paginaDoPaciente" element={<PaginaDetalhamento/>}></Route>
           <Route path="/Cadastro" element={<Cadastro/>}></Route>
           <Route path='/Exames' element={<HistoricoGeral/>}></Route>
           <Route path='/ExamesMe' element={<PaginaMedico/>}></Route>
+          <Route path='/novoExame' element={<ExamePage/>}></Route>
+          <Route path='/cadastro' element={<NovoCadastro/>}></Route>
+          <Route path='/TabelaExames' element={<TabelaExames/>}></Route>
           </Routes>
         </Container>
         <>
+
         <Rodape/>
         </>
     </Router>

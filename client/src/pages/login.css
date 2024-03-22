@@ -1,6 +1,8 @@
 body {
   background-color:rgb(216, 217, 228);
 }
+
+
 .tipoAcesso{
   width: 100%;
   display: flex;

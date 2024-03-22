@@ -1,133 +1,181 @@
-import {Link} from 'react-router-dom'
-import React, { useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import styles from './LoginForm.module.css';
-import Input from '../Input' 
+import Input from '../Input';
 import axios from 'axios';
+import PaginaDetalhamento from '../../pagina-detalhamento'
 
-function LoginForm(){
+function LoginForm() {
 
-  const [backendData, setBackendData] = useState([{}])
-  const [password, setpassword] = useState('');
-  const [cpf, setcpf] = useState('');
-  const [error, seterror] = useState('');
-  const [user, setuser] = useState (null);
+  const [backendData, setBackendData] = useState([]);
+  const [password, setPassword] = useState('');
+  const [cpf, setCpf] = useState('');
+  const [error, setError] = useState('');
+  const [user, setUser] = useState(null);
 
-  useEffect(()=> {
-    fetch("/api").then(
+  useEffect(() => {
+    fetch("http://localhost:5000/api").then(
       response => response.json()
     ).then(
       data => {
-        setBackendData(data)
-        console.log(data)
+        setBackendData(data);
+        console.log(data);
       }
     )
+  }, []);
 
-  }, [])
-
-
-  const handleCadastro = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+
+    console.log(cpf, password);
+
     try {
-    
-    
+      const response = await axios.post('http://localhost:5000/api/usersJson', {
+        cpf,
+        password
+      });
+      setUser(response.data);
 
-    const response = await axios.get('http://localhost:5000/api/usersJson', 
-    JSON.stringify({cpf, password}),
-    {
-      headers : {'content-type' : 'application/json'}
-    })
-    
-    setuser(response.data);
-
-  } catch(error) {
+    } catch (error) {
       if (!error?.response) {
-        seterror ('Erro ao acessar o servidor');
-      } else if (error.response.status == 401) {
-        seterror('Usuários ou senha inválidos');
+        setError('Erro ao acessar o servidor');
+      } else if (error.response.status === 401) {
+        setError('Usuários ou senha inválidos');
       }
+    }
+  };
 
-    } }
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    setUser(null)
 
-
-<<<<<<< HEAD
-
+  }
 
   return (
-    
-    {user == null ? (
-      <div>
-      <div className={styles.form}>
-     {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.users.map((user,i) => {
-        <div>
-          <p key={i}>{user}</p>
-        </div>
-     })
-      )}
-=======
-  return(
     <div className={styles.form}>
-     
->>>>>>> d2b931c491efe4116a416e58462ab6ead2d944de
-    <h1>Resultados de Exames</h1>
-    <p>Login</p>
-    <form >
-      <Input
-      type="text"
-      text="CPF:"
-      name="name"
-      placeholder="Insira seu CPF" 
-      id = "cpf"
-      required 
-      handleOnChange = {(e) => setcpf(e.target.value)}
-      />
-      <Input
-      type="password"
-      text="Senha:"
-      name="password"
-      placeholder="Insira sua senha" 
-      required 
-      handleOnChange = {(e) => setpassword(e.target.value)}
-      />
-<<<<<<< HEAD
-      
-      <button type='submit' className={styles.botao} onClick={(e) => handleCadastro(e)}>
-        Entrar
-      </button>
-      
-      
-=======
-     
-      <li className={styles.botao}>
-        <Link to="/Exames">Entrar</Link>
-      </li>
->>>>>>> d2b931c491efe4116a416e58462ab6ead2d944de
-      <li className={styles.cadastro}>
-      <Link  to= "/Cadastro">ME CADASTRAR</Link>
-      </li>
+      <h1>Resultados de Exames</h1>
+    
+      {user== null ?(
+      <div>
+      <p>Login</p>
+      <form>
+        <Input
+          type="text"
+          text="CPF:"
+          name="name"
+          placeholder="Insira seu CPF"
+          id="cpf"
+          required
+          handleOnChange={(e) => setCpf(e.target.value)}
+        />
+        <Input
+          type="password"
+          text="Senha:"
+          name="password"
+          placeholder="Insira sua senha"
+          required
+          handleOnChange={(e) => setPassword(e.target.value)}
+        />
+        <button type='submit' className={styles.botao} onClick={(e) => handleLogin(e)}>
+          Entrar
+        </button>
+        {/* <Link to="/paginaDoPaciente" className={styles.botao} onClick={(e) => handleLogin(e)}> 
+  Entrar
+</Link>*/}
 
-
-    </form>
-    <p>
-      {error}
-    </p>
+        {/* <Link to="/Cadastro">ME CADASTRAR</Link> */}
+      </form>
+      <p>{error}</p>
+  </div>
+  ) : (
+    <div>
+        <PaginaDetalhamento/>
+        <button type="button" 
+        className={styles.botao}
+        onClick={(e) => handleLogout(e)}>Sair</button>
     </div>
-      
-      </div>
 
-    
-    ) : (
-      <Link  to= "/Exames">Olá,{user.nome}</Link>
-    )}
-    );
-  }
-    
-  
+  )}
+  </div>
+)}
+
+export default LoginForm;
 
 
+// import { Link } from 'react-router-dom';
+// import React, { useState, useEffect } from 'react';
+// import styles from './LoginForm.module.css';
+// import Input from '../Input';
+// import axios from 'axios';
+
+// function LoginForm() {
+//   const [backendData, setBackendData] = useState([]);
+//   const [password, setPassword] = useState('');
+//   const [cpf, setCpf] = useState('');
+//   const [error, setError] = useState('');
+//   const [user, setUser] = useState(null);
+
+//   useEffect(() => {
+//     fetch("http://localhost:5000/api").then(
+//       response => response.json()
+//     ).then(
+//       data => {
+//         setBackendData(data);
+//         console.log(data);
+//       }
+//     )
+//   }, []);
+
+//   const handleCadastro = async (e) => {
+//     e.preventDefault();
+//     try {
+//       const response = await axios.post('http://localhost:5000/api/usersJson', {
+//         cpf,
+//         password
+//       });
+//       setUser(response.data);
+//     } catch (error) {
+//       if (!error?.response) {
+//         setError('Erro ao acessar o servidor');
+//       } else if (error.response.status === 401) {
+//         setError('Usuários ou senha inválidos');
+//       }
+//     }
+//   };
+
+//   return (
+//     <div className={styles.form}>
+//       <h1>Resultados de Exames</h1>
+//       <p>Login</p>
+//       <form>
+//         <Input
+//           type="text"
+//           text="CPF:"
+//           name="name"
+//           placeholder="Insira seu CPF"
+//           id="cpf"
+//           required
+//           handleOnChange={(e) => setCpf(e.target.value)}
+//         />
+//         <Input
+//           type="password"
+//           text="Senha:"
+//           name="password"
+//           placeholder="Insira sua senha"
+//           required
+//           handleOnChange={(e) => setPassword(e.target.value)}
+//         />
+//         <button type='submit' className={styles.botao} onClick={(e) => handleCadastro(e)}>
+//           Entrar
+//         </button>
+
+//       </form>
+//       <p>{error}</p>
+//     </div>
+//   );
+// }
+
+// export default LoginForm;
 
 
-export default LoginForm
 

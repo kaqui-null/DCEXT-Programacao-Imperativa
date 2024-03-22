@@ -3,7 +3,8 @@ function Rodape(){
   return(
     <footer className={styles.rodape}>
       <p>
-        <span className={styles.txt}>SCH - Superintendência do Complexo Hospitalar da UPE</span> &copy; 2024
+        <span className={styles.txt}>SCH - Superintendência do Complexo Hospitalar da UPE</span> 
+        {/* &copy; 2024 */}
       </p>
     </footer>
   )

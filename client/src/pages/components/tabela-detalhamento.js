@@ -23,7 +23,8 @@ export default function TabelaDetalhamentoExame(){
           <tbody>
             <tr>
               <td>exame 1</td>
-              <td>LINK PARA ACESSO: {backendData.a.url}</td>
+              <td>LINK PARA ACESSO:</td>
+               {/* {backendData.a.url} */}
               <td>LINK PARA DOWNLOAD: </td>
               <td>status</td>
             </tr>

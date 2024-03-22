@@ -27,12 +27,21 @@ fs.readFile('json_api_modules/users.json', 'utf8', function (err, data) {
 app.get("/api/usersJson", (req, res) => {
     res.json(usersObj)
 })
+app.get("/api/medicosJson", (req, res) => {
+    res.json(usersObj)
+})
+// app.post("/api/usersJson", (req, res) => {
+//     res.json(usersObj)
+//     usersObj[0]=req.body
+//     fs.writeFileSync('json_api_modules/users.json', JSON.stringify(usersObj));
+// })
 
 app.post("/api/usersCadastro", (req, res) => {
     res.json(usersObj)
     usersObj[0]=req.body
     fs.writeFileSync('json_api_modules/users.json', JSON.stringify(usersObj));
 })
+
 
 
 

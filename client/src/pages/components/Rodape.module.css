@@ -1,13 +1,24 @@
+
+
 .rodape{
+  display: flex;
+  justify-content: center;
   background-color: #163e71;
   color: aliceblue;
   padding: 0.4em;
+  width: 100%;
+  /* width: 100%;
+  position: absolute;
+  background-color: #163e71;
+  
+  
   text-align: center;
+  justify-content: center; */
 }
 
 .txt{
   display: flex;
   justify-content: center;
-  font-weight: bold;
   font-size: 1em;
+  
 }
